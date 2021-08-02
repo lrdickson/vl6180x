@@ -1,0 +1,16 @@
+[package]
+authors = ["Lyndsey Dickson"]
+name = "vl6180x"
+version = "0.0.1"
+edition = "2018"
+
+[dependencies]
+nb = "1.0"
+
+[dependencies.cast]
+default-features = false
+version = "0.2.7"
+
+[dependencies.hal]
+version = "0.2"
+package = "embedded-hal"

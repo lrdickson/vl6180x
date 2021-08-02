@@ -1,0 +1,260 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/lyn/Projects/rust/vl6180x/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+0	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	a	array:deps
+0	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n	array:deps.0
+0	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n	array:deps.1
+0	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	o	array:local
+0	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	a	array:deps
+0	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n	array:deps.0
+0	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n	array:deps.1
+0	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	o	array:local
+0	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	a	array:deps
+0	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n	array:deps.0
+0	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	o	array:local
+0	target/debug/.fingerprint/nb-6a0920465a11ee85/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	o	array:local
+0	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	a	array:deps
+0	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n	array:deps.0
+0	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	o	array:local
+0	target/debug/.fingerprint/nb-e872944f65c8e81a/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	o	array:local
+0	target/debug/.fingerprint/void-20dedf6b98ae8f5a/lib-void.json	/^{"rustc":6295077590249249015,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	o	array:local
+0	target/debug/.fingerprint/void-44d1c74d5f20b4ca/lib-void.json	/^{"rustc":5475348352969617417,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	o	array:local
+1	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	a	array:deps
+1	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	s	array:deps.0
+1	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	s	array:deps.1
+1	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	a	array:deps
+1	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	s	array:deps.0
+1	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	s	array:deps.1
+1	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	s	array:deps.0
+1	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	s	array:deps.0
+17598535894874457435	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	o	object:outputs
+2	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	b	array:deps.0
+2	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	b	array:deps.1
+2	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	b	array:deps.0
+2	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	b	array:deps.1
+2	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	b	array:deps.0
+2	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	b	array:deps.0
+2797684049618456168	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	o	object:outputs
+3	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n	array:deps.0
+3	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n	array:deps.1
+3	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n	array:deps.0
+3	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n	array:deps.1
+3	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n	array:deps.0
+3	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n	array:deps.0
+931469667778813386	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	o	object:outputs
+BusError	src/lib.rs	/^    BusError(E),$/;"	e	enum:Error
+CheckDepInfo	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	o	object:local.0
+CheckDepInfo	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	o	object:local.0
+CheckDepInfo	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	o	object:local.0
+CheckDepInfo	target/debug/.fingerprint/nb-6a0920465a11ee85/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	o	object:local.0
+CheckDepInfo	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	o	object:local.0
+CheckDepInfo	target/debug/.fingerprint/nb-e872944f65c8e81a/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	o	object:local.0
+CheckDepInfo	target/debug/.fingerprint/void-20dedf6b98ae8f5a/lib-void.json	/^{"rustc":6295077590249249015,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	o	object:local.0
+CheckDepInfo	target/debug/.fingerprint/void-44d1c74d5f20b4ca/lib-void.json	/^{"rustc":5475348352969617417,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	o	object:local.0
+Error	src/lib.rs	/^impl<E> core::convert::From<E> for Error<E> {$/;"	c
+Error	src/lib.rs	/^pub enum Error<E> {$/;"	g
+FIRMWARE__BOOTUP	src/lib.rs	/^    FIRMWARE__BOOTUP                      = 0x119,$/;"	e	enum:RegisterAddress
+FIRMWARE__RESULT_SCALER	src/lib.rs	/^    FIRMWARE__RESULT_SCALER               = 0x120,$/;"	e	enum:RegisterAddress
+I2C_SLAVE__DEVICE_ADDRESS	src/lib.rs	/^    I2C_SLAVE__DEVICE_ADDRESS             = 0x212,$/;"	e	enum:RegisterAddress
+IDENTIFICATION__DATE_HI	src/lib.rs	/^    IDENTIFICATION__DATE_HI               = 0x006,$/;"	e	enum:RegisterAddress
+IDENTIFICATION__DATE_LO	src/lib.rs	/^    IDENTIFICATION__DATE_LO               = 0x007,$/;"	e	enum:RegisterAddress
+IDENTIFICATION__MODEL_ID	src/lib.rs	/^    IDENTIFICATION__MODEL_ID              = 0x000,$/;"	e	enum:RegisterAddress
+IDENTIFICATION__MODEL_REV_MAJOR	src/lib.rs	/^    IDENTIFICATION__MODEL_REV_MAJOR       = 0x001,$/;"	e	enum:RegisterAddress
+IDENTIFICATION__MODEL_REV_MINOR	src/lib.rs	/^    IDENTIFICATION__MODEL_REV_MINOR       = 0x002,$/;"	e	enum:RegisterAddress
+IDENTIFICATION__MODULE_REV_MAJOR	src/lib.rs	/^    IDENTIFICATION__MODULE_REV_MAJOR      = 0x003,$/;"	e	enum:RegisterAddress
+IDENTIFICATION__MODULE_REV_MINOR	src/lib.rs	/^    IDENTIFICATION__MODULE_REV_MINOR      = 0x004,$/;"	e	enum:RegisterAddress
+IDENTIFICATION__TIME	src/lib.rs	/^    IDENTIFICATION__TIME                  = 0x008, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+INTERLEAVED_MODE__ENABLE	src/lib.rs	/^    INTERLEAVED_MODE__ENABLE              = 0x2A3,$/;"	e	enum:RegisterAddress
+InvalidDevice	src/lib.rs	/^    InvalidDevice(u8),$/;"	e	enum:Error
+RANGE_SCALER	src/lib.rs	/^    RANGE_SCALER                          = 0x096, \/\/ 16-bit - see STSW-IMG003 core\/inc\/vl61/;"	e	enum:RegisterAddress
+READOUT__AVERAGING_SAMPLE_PERIOD	src/lib.rs	/^    READOUT__AVERAGING_SAMPLE_PERIOD      = 0x10A,$/;"	e	enum:RegisterAddress
+RESULT__ALS_STATUS	src/lib.rs	/^    RESULT__ALS_STATUS                    = 0x04E,$/;"	e	enum:RegisterAddress
+RESULT__ALS_VAL	src/lib.rs	/^    RESULT__ALS_VAL                       = 0x050, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+RESULT__HISTORY_BUFFER_0	src/lib.rs	/^    RESULT__HISTORY_BUFFER_0              = 0x052, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+RESULT__HISTORY_BUFFER_1	src/lib.rs	/^    RESULT__HISTORY_BUFFER_1              = 0x054, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+RESULT__HISTORY_BUFFER_2	src/lib.rs	/^    RESULT__HISTORY_BUFFER_2              = 0x056, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+RESULT__HISTORY_BUFFER_3	src/lib.rs	/^    RESULT__HISTORY_BUFFER_3              = 0x058, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+RESULT__HISTORY_BUFFER_4	src/lib.rs	/^    RESULT__HISTORY_BUFFER_4              = 0x05A, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+RESULT__HISTORY_BUFFER_5	src/lib.rs	/^    RESULT__HISTORY_BUFFER_5              = 0x05C, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+RESULT__HISTORY_BUFFER_6	src/lib.rs	/^    RESULT__HISTORY_BUFFER_6              = 0x05E, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+RESULT__HISTORY_BUFFER_7	src/lib.rs	/^    RESULT__HISTORY_BUFFER_7              = 0x060, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+RESULT__INTERRUPT_STATUS_GPIO	src/lib.rs	/^    RESULT__INTERRUPT_STATUS_GPIO         = 0x04F,$/;"	e	enum:RegisterAddress
+RESULT__RANGE_RAW	src/lib.rs	/^    RESULT__RANGE_RAW                     = 0x064,$/;"	e	enum:RegisterAddress
+RESULT__RANGE_REFERENCE_AMB_COUNT	src/lib.rs	/^    RESULT__RANGE_REFERENCE_AMB_COUNT     = 0x078, \/\/ 32-bit$/;"	e	enum:RegisterAddress
+RESULT__RANGE_REFERENCE_CONV_TIME	src/lib.rs	/^    RESULT__RANGE_REFERENCE_CONV_TIME     = 0x080, \/\/ 32-bit$/;"	e	enum:RegisterAddress
+RESULT__RANGE_REFERENCE_RATE	src/lib.rs	/^    RESULT__RANGE_REFERENCE_RATE          = 0x068, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+RESULT__RANGE_REFERENCE_SIGNAL_COUNT	src/lib.rs	/^    RESULT__RANGE_REFERENCE_SIGNAL_COUNT  = 0x070, \/\/ 32-bit$/;"	e	enum:RegisterAddress
+RESULT__RANGE_RETURN_AMB_COUNT	src/lib.rs	/^    RESULT__RANGE_RETURN_AMB_COUNT        = 0x074, \/\/ 32-bit$/;"	e	enum:RegisterAddress
+RESULT__RANGE_RETURN_CONV_TIME	src/lib.rs	/^    RESULT__RANGE_RETURN_CONV_TIME        = 0x07C, \/\/ 32-bit$/;"	e	enum:RegisterAddress
+RESULT__RANGE_RETURN_RATE	src/lib.rs	/^    RESULT__RANGE_RETURN_RATE             = 0x066, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+RESULT__RANGE_RETURN_SIGNAL_COUNT	src/lib.rs	/^    RESULT__RANGE_RETURN_SIGNAL_COUNT     = 0x06C, \/\/ 32-bit$/;"	e	enum:RegisterAddress
+RESULT__RANGE_STATUS	src/lib.rs	/^    RESULT__RANGE_STATUS                  = 0x04D,$/;"	e	enum:RegisterAddress
+RESULT__RANGE_VAL	src/lib.rs	/^    RESULT__RANGE_VAL                     = 0x062,$/;"	e	enum:RegisterAddress
+RegisterAddress	src/lib.rs	/^enum RegisterAddress$/;"	g
+SYSALS__ANALOGUE_GAIN	src/lib.rs	/^    SYSALS__ANALOGUE_GAIN                 = 0x03F,$/;"	e	enum:RegisterAddress
+SYSALS__INTEGRATION_PERIOD	src/lib.rs	/^    SYSALS__INTEGRATION_PERIOD            = 0x040,$/;"	e	enum:RegisterAddress
+SYSALS__INTERMEASUREMENT_PERIOD	src/lib.rs	/^    SYSALS__INTERMEASUREMENT_PERIOD       = 0x03E,$/;"	e	enum:RegisterAddress
+SYSALS__START	src/lib.rs	/^    SYSALS__START                         = 0x038,$/;"	e	enum:RegisterAddress
+SYSALS__THRESH_HIGH	src/lib.rs	/^    SYSALS__THRESH_HIGH                   = 0x03A,$/;"	e	enum:RegisterAddress
+SYSALS__THRESH_LOW	src/lib.rs	/^    SYSALS__THRESH_LOW                    = 0x03C,$/;"	e	enum:RegisterAddress
+SYSRANGE__CROSSTALK_COMPENSATION_RATE	src/lib.rs	/^    SYSRANGE__CROSSTALK_COMPENSATION_RATE = 0x01E, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+SYSRANGE__CROSSTALK_VALID_HEIGHT	src/lib.rs	/^    SYSRANGE__CROSSTALK_VALID_HEIGHT      = 0x021,$/;"	e	enum:RegisterAddress
+SYSRANGE__EARLY_CONVERGENCE_ESTIMATE	src/lib.rs	/^    SYSRANGE__EARLY_CONVERGENCE_ESTIMATE  = 0x022, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+SYSRANGE__INTERMEASUREMENT_PERIOD	src/lib.rs	/^    SYSRANGE__INTERMEASUREMENT_PERIOD     = 0x01B,$/;"	e	enum:RegisterAddress
+SYSRANGE__MAX_AMBIENT_LEVEL_MULT	src/lib.rs	/^    SYSRANGE__MAX_AMBIENT_LEVEL_MULT      = 0x02C,$/;"	e	enum:RegisterAddress
+SYSRANGE__MAX_CONVERGENCE_TIME	src/lib.rs	/^    SYSRANGE__MAX_CONVERGENCE_TIME        = 0x01C,$/;"	e	enum:RegisterAddress
+SYSRANGE__PART_TO_PART_RANGE_OFFSET	src/lib.rs	/^    SYSRANGE__PART_TO_PART_RANGE_OFFSET   = 0x024,$/;"	e	enum:RegisterAddress
+SYSRANGE__RANGE_CHECK_ENABLES	src/lib.rs	/^    SYSRANGE__RANGE_CHECK_ENABLES         = 0x02D,$/;"	e	enum:RegisterAddress
+SYSRANGE__RANGE_IGNORE_THRESHOLD	src/lib.rs	/^    SYSRANGE__RANGE_IGNORE_THRESHOLD      = 0x026, \/\/ 16-bit$/;"	e	enum:RegisterAddress
+SYSRANGE__RANGE_IGNORE_VALID_HEIGHT	src/lib.rs	/^    SYSRANGE__RANGE_IGNORE_VALID_HEIGHT   = 0x025,$/;"	e	enum:RegisterAddress
+SYSRANGE__START	src/lib.rs	/^    SYSRANGE__START                       = 0x018,$/;"	e	enum:RegisterAddress
+SYSRANGE__THRESH_HIGH	src/lib.rs	/^    SYSRANGE__THRESH_HIGH                 = 0x019,$/;"	e	enum:RegisterAddress
+SYSRANGE__THRESH_LOW	src/lib.rs	/^    SYSRANGE__THRESH_LOW                  = 0x01A,$/;"	e	enum:RegisterAddress
+SYSRANGE__VHV_RECALIBRATE	src/lib.rs	/^    SYSRANGE__VHV_RECALIBRATE             = 0x02E,$/;"	e	enum:RegisterAddress
+SYSRANGE__VHV_REPEAT_RATE	src/lib.rs	/^    SYSRANGE__VHV_REPEAT_RATE             = 0x031,$/;"	e	enum:RegisterAddress
+SYSTEM__FRESH_OUT_OF_RESET	src/lib.rs	/^    SYSTEM__FRESH_OUT_OF_RESET            = 0x016,$/;"	e	enum:RegisterAddress
+SYSTEM__GROUPED_PARAMETER_HOLD	src/lib.rs	/^    SYSTEM__GROUPED_PARAMETER_HOLD        = 0x017,$/;"	e	enum:RegisterAddress
+SYSTEM__HISTORY_CTRL	src/lib.rs	/^    SYSTEM__HISTORY_CTRL                  = 0x012,$/;"	e	enum:RegisterAddress
+SYSTEM__INTERRUPT_CLEAR	src/lib.rs	/^    SYSTEM__INTERRUPT_CLEAR               = 0x015,$/;"	e	enum:RegisterAddress
+SYSTEM__INTERRUPT_CONFIG_GPIO	src/lib.rs	/^    SYSTEM__INTERRUPT_CONFIG_GPIO         = 0x014,$/;"	e	enum:RegisterAddress
+SYSTEM__MODE_GPIO0	src/lib.rs	/^    SYSTEM__MODE_GPIO0                    = 0x010,$/;"	e	enum:RegisterAddress
+SYSTEM__MODE_GPIO1	src/lib.rs	/^    SYSTEM__MODE_GPIO1                    = 0x011,$/;"	e	enum:RegisterAddress
+Timeout	src/lib.rs	/^    Timeout,$/;"	e	enum:Error
+VL6180X	src/lib.rs	/^impl<I2C, E> VL6180X<I2C>$/;"	c
+VL6180X	src/lib.rs	/^pub struct VL6180X<I2C: hal::blocking::i2c::WriteRead> {$/;"	s
+address	src/lib.rs	/^    address: u8,$/;"	m	struct:VL6180X
+bus	src/lib.rs	/^    bus: I2C,$/;"	m	struct:VL6180X
+code	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	n	object:outputs.17598535894874457435
+code	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	n	object:outputs.2797684049618456168
+code	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	n	object:outputs.931469667778813386
+compile_kind	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n
+compile_kind	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n
+compile_kind	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n
+compile_kind	target/debug/.fingerprint/nb-6a0920465a11ee85/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	n
+compile_kind	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n
+compile_kind	target/debug/.fingerprint/nb-e872944f65c8e81a/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	n
+compile_kind	target/debug/.fingerprint/void-20dedf6b98ae8f5a/lib-void.json	/^{"rustc":6295077590249249015,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	n
+compile_kind	target/debug/.fingerprint/void-44d1c74d5f20b4ca/lib-void.json	/^{"rustc":5475348352969617417,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	n
+config	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n
+config	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n
+config	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n
+config	target/debug/.fingerprint/nb-6a0920465a11ee85/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	n
+config	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n
+config	target/debug/.fingerprint/nb-e872944f65c8e81a/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	n
+config	target/debug/.fingerprint/void-20dedf6b98ae8f5a/lib-void.json	/^{"rustc":6295077590249249015,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	n
+config	target/debug/.fingerprint/void-44d1c74d5f20b4ca/lib-void.json	/^{"rustc":5475348352969617417,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	n
+dep_info	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	s	object:local.0.CheckDepInfo
+dep_info	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	s	object:local.0.CheckDepInfo
+dep_info	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	s	object:local.0.CheckDepInfo
+dep_info	target/debug/.fingerprint/nb-6a0920465a11ee85/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	s	object:local.0.CheckDepInfo
+dep_info	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	s	object:local.0.CheckDepInfo
+dep_info	target/debug/.fingerprint/nb-e872944f65c8e81a/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	s	object:local.0.CheckDepInfo
+dep_info	target/debug/.fingerprint/void-20dedf6b98ae8f5a/lib-void.json	/^{"rustc":6295077590249249015,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	s	object:local.0.CheckDepInfo
+dep_info	target/debug/.fingerprint/void-44d1c74d5f20b4ca/lib-void.json	/^{"rustc":5475348352969617417,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	s	object:local.0.CheckDepInfo
+deps	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	a
+deps	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	a
+deps	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	a
+deps	target/debug/.fingerprint/nb-6a0920465a11ee85/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	a
+deps	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	a
+deps	target/debug/.fingerprint/nb-e872944f65c8e81a/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	a
+deps	target/debug/.fingerprint/void-20dedf6b98ae8f5a/lib-void.json	/^{"rustc":6295077590249249015,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	a
+deps	target/debug/.fingerprint/void-44d1c74d5f20b4ca/lib-void.json	/^{"rustc":5475348352969617417,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	a
+did_timeout	src/lib.rs	/^    did_timeout: bool,$/;"	m	struct:VL6180X
+features	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	s
+features	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	s
+features	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	s
+features	target/debug/.fingerprint/nb-6a0920465a11ee85/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	s
+features	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	s
+features	target/debug/.fingerprint/nb-e872944f65c8e81a/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	s
+features	target/debug/.fingerprint/void-20dedf6b98ae8f5a/lib-void.json	/^{"rustc":6295077590249249015,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	s
+features	target/debug/.fingerprint/void-44d1c74d5f20b4ca/lib-void.json	/^{"rustc":5475348352969617417,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	s
+from	src/lib.rs	/^    fn from(error: E) -> Self {$/;"	P	implementation:Error
+io_timeout	src/lib.rs	/^    io_timeout: u16,$/;"	m	struct:VL6180X
+last_status	src/lib.rs	/^    pub last_status: u8,$/;"	m	struct:VL6180X
+local	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	a
+local	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	a
+local	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	a
+local	target/debug/.fingerprint/nb-6a0920465a11ee85/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	a
+local	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	a
+local	target/debug/.fingerprint/nb-e872944f65c8e81a/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	a
+local	target/debug/.fingerprint/void-20dedf6b98ae8f5a/lib-void.json	/^{"rustc":6295077590249249015,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	a
+local	target/debug/.fingerprint/void-44d1c74d5f20b4ca/lib-void.json	/^{"rustc":5475348352969617417,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	a
+main	src/main.rs	/^fn main() {$/;"	f
+metadata	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n
+metadata	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n
+metadata	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n
+metadata	target/debug/.fingerprint/nb-6a0920465a11ee85/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	n
+metadata	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n
+metadata	target/debug/.fingerprint/nb-e872944f65c8e81a/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	n
+metadata	target/debug/.fingerprint/void-20dedf6b98ae8f5a/lib-void.json	/^{"rustc":6295077590249249015,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	n
+metadata	target/debug/.fingerprint/void-44d1c74d5f20b4ca/lib-void.json	/^{"rustc":5475348352969617417,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	n
+new	src/lib.rs	/^    pub fn new(i2c: I2C) -> VL6180X<I2C>$/;"	f
+outputs	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	o
+path	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n
+path	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n
+path	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n
+path	target/debug/.fingerprint/nb-6a0920465a11ee85/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	n
+path	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n
+path	target/debug/.fingerprint/nb-e872944f65c8e81a/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	n
+path	target/debug/.fingerprint/void-20dedf6b98ae8f5a/lib-void.json	/^{"rustc":6295077590249249015,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	n
+path	target/debug/.fingerprint/void-44d1c74d5f20b4ca/lib-void.json	/^{"rustc":5475348352969617417,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	n
+profile	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n
+profile	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n
+profile	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n
+profile	target/debug/.fingerprint/nb-6a0920465a11ee85/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	n
+profile	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n
+profile	target/debug/.fingerprint/nb-e872944f65c8e81a/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	n
+profile	target/debug/.fingerprint/void-20dedf6b98ae8f5a/lib-void.json	/^{"rustc":6295077590249249015,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	n
+profile	target/debug/.fingerprint/void-44d1c74d5f20b4ca/lib-void.json	/^{"rustc":5475348352969617417,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	n
+ptp_offset	src/lib.rs	/^    ptp_offset: u8,$/;"	m	struct:VL6180X
+read_register	src/lib.rs	/^    pub fn read_register(&mut self, register: u16) -> Result<u8, E>$/;"	f
+rustc	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n
+rustc	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n
+rustc	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n
+rustc	target/debug/.fingerprint/nb-6a0920465a11ee85/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	n
+rustc	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n
+rustc	target/debug/.fingerprint/nb-e872944f65c8e81a/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	n
+rustc	target/debug/.fingerprint/void-20dedf6b98ae8f5a/lib-void.json	/^{"rustc":6295077590249249015,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	n
+rustc	target/debug/.fingerprint/void-44d1c74d5f20b4ca/lib-void.json	/^{"rustc":5475348352969617417,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	n
+rustc_fingerprint	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	n
+rustflags	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	a
+rustflags	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	a
+rustflags	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	a
+rustflags	target/debug/.fingerprint/nb-6a0920465a11ee85/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	a
+rustflags	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	a
+rustflags	target/debug/.fingerprint/nb-e872944f65c8e81a/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	a
+rustflags	target/debug/.fingerprint/void-20dedf6b98ae8f5a/lib-void.json	/^{"rustc":6295077590249249015,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	a
+rustflags	target/debug/.fingerprint/void-44d1c74d5f20b4ca/lib-void.json	/^{"rustc":5475348352969617417,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	a
+scaling	src/lib.rs	/^    scaling: u8,$/;"	m	struct:VL6180X
+set_address	src/lib.rs	/^    pub fn set_address(new_addr: u8)$/;"	f
+status	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	s	object:outputs.17598535894874457435
+status	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	s	object:outputs.2797684049618456168
+status	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	s	object:outputs.931469667778813386
+stderr	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	s	object:outputs.17598535894874457435
+stderr	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	s	object:outputs.2797684049618456168
+stderr	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	s	object:outputs.931469667778813386
+stdout	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	s	object:outputs.17598535894874457435
+stdout	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	s	object:outputs.2797684049618456168
+stdout	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	s	object:outputs.931469667778813386
+success	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	b	object:outputs.17598535894874457435
+success	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	b	object:outputs.2797684049618456168
+success	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	b	object:outputs.931469667778813386
+successes	target/.rustc_info.json	/^{"rustc_fingerprint":10674449515574855898,"outputs":{"931469667778813386":{"success":true,"statu/;"	o
+target	target/debug/.fingerprint/embedded-hal-5411bc639c9586f1/lib-embedded-hal.json	/^{"rustc":6295077590249249015,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n
+target	target/debug/.fingerprint/embedded-hal-6a3aa89033e8d818/lib-embedded-hal.json	/^{"rustc":5475348352969617417,"features":"[]","target":307153153720857497,"profile":1003349547137/;"	n
+target	target/debug/.fingerprint/nb-597ca48fca9281e5/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n
+target	target/debug/.fingerprint/nb-6a0920465a11ee85/lib-nb.json	/^{"rustc":5475348352969617417,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	n
+target	target/debug/.fingerprint/nb-bd9b25272ff141b4/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":2905578645065010831,"profile":100334954713/;"	n
+target	target/debug/.fingerprint/nb-e872944f65c8e81a/lib-nb.json	/^{"rustc":6295077590249249015,"features":"[]","target":5056940959592014476,"profile":100334954713/;"	n
+target	target/debug/.fingerprint/void-20dedf6b98ae8f5a/lib-void.json	/^{"rustc":6295077590249249015,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	n
+target	target/debug/.fingerprint/void-44d1c74d5f20b4ca/lib-void.json	/^{"rustc":5475348352969617417,"features":"[]","target":214248268254788652,"profile":1003349547137/;"	n
+write_register	src/lib.rs	/^    pub fn write_register(&mut self, register: u16, value: u8)$/;"	f
+write_register_16bit	src/lib.rs	/^    pub fn write_register_16bit(&mut self, register: u16, value: u16)$/;"	f
