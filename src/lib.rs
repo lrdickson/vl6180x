@@ -57,6 +57,8 @@ use hal::blocking::i2c::{Write, WriteRead};
 use nb;
 
 const ADDRESS_DEFAULT: u8 = 0x29;
+
+// RANGE_SCALER values for 1x, 2x, 3x scaling - see STSW-IMG003 core/src/vl6180x_api.c (ScalerLookUP[])
 const SCALER_VALUES: [u16; 4] = [0, 253, 127, 84];
 
 pub struct VL6180X<I2C: hal::blocking::i2c::WriteRead> {
@@ -68,7 +70,7 @@ pub struct VL6180X<I2C: hal::blocking::i2c::WriteRead> {
     did_timeout: bool,
 }
 
-/// MPU Error
+// MPU Error
 #[derive(Debug, Copy, Clone)]
 pub enum Error<E> {
     /// WHO_AM_I returned invalid value (returned value is argument).
@@ -179,6 +181,120 @@ where
 
       Ok(())
     }
+
+    // Configure some settings for the sensor's default behavior from AN4545 -
+    // "Recommended : Public registers" and "Optional: Public registers"
+    //
+    // Note that this function does not set up GPIO1 as an interrupt output as
+    // suggested, though you can do so by calling:
+    // writeReg(SYSTEM__MODE_GPIO1, 0x10);
+    pub fn configure_default(&mut self) -> Result<(), E>
+    {
+      // "Recommended : Public registers"
+
+      // readout__averaging_sample_period = 48
+      self.write_register(RegisterAddress::READOUT__AVERAGING_SAMPLE_PERIOD, 0x30)?;
+
+      // sysals__analogue_gain_light = 6 (ALS gain = 1 nominal, actually 1.01 according to table "Actual gain values" in datasheet)
+      self.write_register(RegisterAddress::SYSALS__ANALOGUE_GAIN, 0x46)?;
+
+      // sysrange__vhv_repeat_rate = 255 (auto Very High Voltage temperature recalibration after every 255 range measurements)
+      self.write_register(RegisterAddress::SYSRANGE__VHV_REPEAT_RATE, 0xFF)?;
+
+      // sysals__integration_period = 99 (100 ms)
+      self.write_register_16bit(RegisterAddress::SYSALS__INTEGRATION_PERIOD, 0x0063)?;
+
+      // sysrange__vhv_recalibrate = 1 (manually trigger a VHV recalibration)
+      self.write_register(RegisterAddress::SYSRANGE__VHV_RECALIBRATE, 0x01)?;
+
+
+      // "Optional: Public registers"
+
+      // sysrange__intermeasurement_period = 9 (100 ms)
+      self.write_register(RegisterAddress::SYSRANGE__INTERMEASUREMENT_PERIOD, 0x09)?;
+
+      // sysals__intermeasurement_period = 49 (500 ms)
+      self.write_register(RegisterAddress::SYSALS__INTERMEASUREMENT_PERIOD, 0x31)?;
+
+      // als_int_mode = 4 (ALS new sample ready interrupt)?; range_int_mode = 4 (range new sample ready interrupt)
+      self.write_register(RegisterAddress::SYSTEM__INTERRUPT_CONFIG_GPIO, 0x24)?;
+
+
+      // Reset other settings to power-on defaults
+
+      // sysrange__max_convergence_time = 49 (49 ms)
+      self.write_register(RegisterAddress::SYSRANGE__MAX_CONVERGENCE_TIME, 0x31)?;
+
+      // disable interleaved mode
+      self.write_register(RegisterAddress::INTERLEAVED_MODE__ENABLE, 0)?;
+
+      // reset range scaling factor to 1x
+      self.set_scaling(1)?;
+
+      Ok(())
+    }
+
+    // Implemented using ST's VL6180X API as a reference (STSW-IMG003); see
+    // VL6180x_UpscaleSetScaling() in vl6180x_api.c.
+    pub fn set_scaling(&mut self, new_scaling: u8) -> Result<(), E>
+    {
+      let default_crosstalk_valid_height: u8 = 20; // default value of SYSRANGE__CROSSTALK_VALID_HEIGHT
+
+      // do nothing if scaling value is invalid
+      if new_scaling < 1 || new_scaling > 3 { return Ok(()); }
+
+      self.scaling = new_scaling;
+      self.write_register_16bit(RegisterAddress::RANGE_SCALER, SCALER_VALUES[self.scaling as usize])?;
+
+      // apply scaling on part-to-part offset
+      self.write_register(
+          RegisterAddress::SYSRANGE__PART_TO_PART_RANGE_OFFSET,
+          self.ptp_offset / self.scaling)?;
+
+      // apply scaling on CrossTalkValidHeight
+      self.write_register(
+          RegisterAddress::SYSRANGE__CROSSTALK_VALID_HEIGHT,
+          default_crosstalk_valid_height / self.scaling)?;
+
+      // This function does not apply scaling to RANGE_IGNORE_VALID_HEIGHT.
+
+      // enable early convergence estimate only at 1x scaling
+      let rce: u8 = self.read_register(RegisterAddress::SYSRANGE__RANGE_CHECK_ENABLES)?;
+      self.write_register(RegisterAddress::SYSRANGE__RANGE_CHECK_ENABLES, (rce & 0xFE) | (self.scaling == 1) as u8)?;
+
+      Ok(())
+    }
+
+    // Performs a single-shot ranging measurement
+    pub fn read_range_single(&mut self) -> Result<u8, E>
+    {
+      self.write_register(RegisterAddress::SYSRANGE__START, 0x01)?;
+      return self.read_range_continuous()?;
+    }
+
+    // Performs a single-shot ambient light measurement
+    pub fn read_ambient_single(&mut self) -> Result<u16, E>
+    {
+      self.write_register(RegisterAddress::SYSALS__START, 0x01)?; return self.read_ambient_continuous()?;
+    }
+
+    // Starts continuous ranging measurements with the given period in ms
+    // (10 ms resolution; defaults to 100 ms if not specified).
+    //
+    // The period must be greater than the time it takes to perform a
+    // measurement. See section "Continuous mode limits" in the datasheet
+    // for details.
+    pub fn start_range_continuous(&mut self, period: u16) -> Result<(), E>
+    {
+      let mut period_reg: u16 = (period / 10) - 1;
+      period_reg = constrain(period_reg, 0, 254);
+
+      writeReg(SYSRANGE__INTERMEASUREMENT_PERIOD, period_reg);
+      writeReg(SYSRANGE__START, 0x03);
+
+      Ok(())
+    }
+
     // Private Methods ///////////////////////////////////////////
 
     // Writes 8-bit
