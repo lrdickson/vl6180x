@@ -49,12 +49,10 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 */
-// #![allow(dead_code)]
+#![allow(dead_code)]
 #![no_std]
 
-use cast::u16;
 use hal::blocking::i2c::{Write, WriteRead};
-use nb;
 
 const ADDRESS_DEFAULT: u8 = 0x29;
 
@@ -66,8 +64,6 @@ pub struct VL6180X<I2C: hal::blocking::i2c::WriteRead> {
     address: u8,
     scaling: u8,
     ptp_offset: u8,
-    io_timeout: u16,
-    did_timeout: bool,
 }
 
 // MPU Error
@@ -103,8 +99,6 @@ where
             address: ADDRESS_DEFAULT,
             scaling: 0,
             ptp_offset: 0,
-            io_timeout: 0,
-            did_timeout: false,
         };
         return sensor;
     }
@@ -266,16 +260,17 @@ where
     }
 
     // Performs a single-shot ranging measurement
-    pub fn read_range_single(&mut self) -> Result<u8, E>
+    pub fn read_range_single(&mut self) -> Result<u8, Error<E>>
     {
       self.write_register(RegisterAddress::SYSRANGE__START, 0x01)?;
-      return self.read_range_continuous()?;
+      return Ok(self.read_range_continuous()?);
     }
 
     // Performs a single-shot ambient light measurement
-    pub fn read_ambient_single(&mut self) -> Result<u16, E>
+    pub fn read_ambient_single(&mut self) -> Result<u16, Error<E>>
     {
-      self.write_register(RegisterAddress::SYSALS__START, 0x01)?; return self.read_ambient_continuous()?;
+      self.write_register(RegisterAddress::SYSALS__START, 0x01)?;
+      return Ok(self.read_ambient_continuous()?);
     }
 
     // Starts continuous ranging measurements with the given period in ms
@@ -301,13 +296,15 @@ where
     // The period must be greater than the time it takes to perform a
     // measurement. See section "Continuous mode limits" in the datasheet
     // for details.
-    pub fn startAmbientContinuous(&mut self, period: u16)
+    pub fn start_ambient_continuous(&mut self, period: u16) -> Result<(), E>
     {
       let period_reg: u16 = (period / 10) - 1;
       let period_reg = constrain(period_reg, 0, 254) as u8;
 
       self.write_register(RegisterAddress::SYSALS__INTERMEASUREMENT_PERIOD, period_reg)?;
       self.write_register(RegisterAddress::SYSALS__START, 0x03)?;
+
+      Ok(())
     }
 
     // Starts continuous interleaved measurements with the given period in ms
@@ -320,7 +317,7 @@ where
     // The period must be greater than the time it takes to perform both
     // measurements. See section "Continuous mode limits" in the datasheet
     // for details.
-    pub fn startInterleavedContinuous(&mut self, period: u16)
+    pub fn start_interleaved_continuous(&mut self, period: u16) -> Result<(), E>
     {
       let period_reg: u16 = (period / 10) - 1;
       let period_reg = constrain(period_reg, 0, 254) as u8;
@@ -328,70 +325,64 @@ where
       self.write_register(RegisterAddress::INTERLEAVED_MODE__ENABLE, 1)?;
       self.write_register(RegisterAddress::SYSALS__INTERMEASUREMENT_PERIOD, period_reg)?;
       self.write_register(RegisterAddress::SYSALS__START, 0x03)?;
+
+      Ok(())
     }
 
     // Stops continuous mode. This will actually start a single measurement of range
     // and/or ambient light if continuous mode is not active, so it's a good idea to
     // wait a few hundred ms after calling this function to let that complete
     // before starting continuous mode again or taking a reading.
-    pub fn stopContinuous()
+    pub fn stop_continuous(&mut self) -> Result<(), E>
     {
 
       self.write_register(RegisterAddress::SYSRANGE__START, 0x01)?;
       self.write_register(RegisterAddress::SYSALS__START, 0x01)?;
 
       self.write_register(RegisterAddress::INTERLEAVED_MODE__ENABLE, 0)?;
+
+      Ok(())
     }
 
     // Returns a range reading when continuous mode is activated
     // (readRangeSingle() also calls this function after starting a single-shot
     // range measurement)
-    pub fn readRangeContinuous(&mut self)
+    pub fn read_range_continuous(&mut self) -> Result<u8, Error<E>>
     {
-      uint16_t millis_start = millis();
-      while ((readReg(RESULT__INTERRUPT_STATUS_GPIO) & 0x04) == 0)
+      let mut count  = 0;
+      while (self.read_register(RegisterAddress::RESULT__INTERRUPT_STATUS_GPIO)? & 0x04) == 0
       {
-        if (io_timeout > 0 && ((uint16_t)millis() - millis_start) > io_timeout)
-        {
-          did_timeout = true;
-          return 255;
+        count += 1;
+        if count == 10000 {
+            return Err(Error::Timeout);
         }
       }
 
-      uint8_t range = readReg(RESULT__RANGE_VAL);
-      self.write_register(RegisterAddress::SYSTEM__INTERRUPT_CLEAR, 0x01);
+      let range = self.read_register(RegisterAddress::RESULT__RANGE_VAL);
+      // Clean up before using ?
+      self.write_register(RegisterAddress::SYSTEM__INTERRUPT_CLEAR, 0x01)?;
 
-      return range;
+      return Ok(range?);
     }
 
     // Returns an ambient light reading when continuous mode is activated
     // (readAmbientSingle() also calls this function after starting a single-shot
     // ambient light measurement)
-    pub fn readAmbientContinuous(&mut self)
+    pub fn read_ambient_continuous(&mut self) -> Result <u16, Error<E>>
     {
-      uint16_t millis_start = millis();
-      while ((readReg(RESULT__INTERRUPT_STATUS_GPIO) & 0x20) == 0)
+      let mut count  = 0;
+      while (self.read_register(RegisterAddress::RESULT__INTERRUPT_STATUS_GPIO)? & 0x04) == 0
       {
-        if (io_timeout > 0 && ((uint16_t)millis() - millis_start) > io_timeout)
-        {
-          did_timeout = true;
-          return 0;
+        count += 1;
+        if count == 10000 {
+            return Err(Error::Timeout);
         }
       }
 
-      uint16_t ambient = readReg16Bit(RESULT__ALS_VAL);
-      self.write_register(RegisterAddress::SYSTEM__INTERRUPT_CLEAR, 0x02);
+      let ambient = self.read_register_16bit(RegisterAddress::RESULT__ALS_VAL);
+      self.write_register(RegisterAddress::SYSTEM__INTERRUPT_CLEAR, 0x02)?;
 
-      return ambient;
-    }
-
-    // Did a timeout occur in one of the read functions since the last call to
-    // timeoutOccurred()?
-    pub fn timeoutOccurred(&mut self)
-    {
-      bool tmp = did_timeout;
-      did_timeout = false;
-      return tmp;
+      return Ok(ambient?);
     }
 
     // Private Methods ///////////////////////////////////////////
