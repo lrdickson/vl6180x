@@ -286,13 +286,112 @@ where
     // for details.
     pub fn start_range_continuous(&mut self, period: u16) -> Result<(), E>
     {
-      let mut period_reg: u16 = (period / 10) - 1;
-      period_reg = constrain(period_reg, 0, 254);
+      let period_reg: u16 = (period / 10) - 1;
+      let period_reg = constrain(period_reg, 0, 254) as u8;
 
-      writeReg(SYSRANGE__INTERMEASUREMENT_PERIOD, period_reg);
-      writeReg(SYSRANGE__START, 0x03);
+      self.write_register(RegisterAddress::SYSRANGE__INTERMEASUREMENT_PERIOD, period_reg)?;
+      self.write_register(RegisterAddress::SYSRANGE__START, 0x03)?;
 
       Ok(())
+    }
+
+    // Starts continuous ambient light measurements with the given period in ms
+    // (10 ms resolution; defaults to 500 ms if not specified).
+    //
+    // The period must be greater than the time it takes to perform a
+    // measurement. See section "Continuous mode limits" in the datasheet
+    // for details.
+    pub fn startAmbientContinuous(&mut self, period: u16)
+    {
+      let period_reg: u16 = (period / 10) - 1;
+      let period_reg = constrain(period_reg, 0, 254) as u8;
+
+      self.write_register(RegisterAddress::SYSALS__INTERMEASUREMENT_PERIOD, period_reg)?;
+      self.write_register(RegisterAddress::SYSALS__START, 0x03)?;
+    }
+
+    // Starts continuous interleaved measurements with the given period in ms
+    // (10 ms resolution; defaults to 500 ms if not specified). In this mode, each
+    // ambient light measurement is immediately followed by a range measurement.
+    //
+    // The datasheet recommends using this mode instead of running "range and ALS
+    // continuous modes simultaneously (i.e. asynchronously)".
+    //
+    // The period must be greater than the time it takes to perform both
+    // measurements. See section "Continuous mode limits" in the datasheet
+    // for details.
+    pub fn startInterleavedContinuous(&mut self, period: u16)
+    {
+      let period_reg: u16 = (period / 10) - 1;
+      let period_reg = constrain(period_reg, 0, 254) as u8;
+
+      self.write_register(RegisterAddress::INTERLEAVED_MODE__ENABLE, 1)?;
+      self.write_register(RegisterAddress::SYSALS__INTERMEASUREMENT_PERIOD, period_reg)?;
+      self.write_register(RegisterAddress::SYSALS__START, 0x03)?;
+    }
+
+    // Stops continuous mode. This will actually start a single measurement of range
+    // and/or ambient light if continuous mode is not active, so it's a good idea to
+    // wait a few hundred ms after calling this function to let that complete
+    // before starting continuous mode again or taking a reading.
+    pub fn stopContinuous()
+    {
+
+      self.write_register(RegisterAddress::SYSRANGE__START, 0x01)?;
+      self.write_register(RegisterAddress::SYSALS__START, 0x01)?;
+
+      self.write_register(RegisterAddress::INTERLEAVED_MODE__ENABLE, 0)?;
+    }
+
+    // Returns a range reading when continuous mode is activated
+    // (readRangeSingle() also calls this function after starting a single-shot
+    // range measurement)
+    pub fn readRangeContinuous(&mut self)
+    {
+      uint16_t millis_start = millis();
+      while ((readReg(RESULT__INTERRUPT_STATUS_GPIO) & 0x04) == 0)
+      {
+        if (io_timeout > 0 && ((uint16_t)millis() - millis_start) > io_timeout)
+        {
+          did_timeout = true;
+          return 255;
+        }
+      }
+
+      uint8_t range = readReg(RESULT__RANGE_VAL);
+      self.write_register(RegisterAddress::SYSTEM__INTERRUPT_CLEAR, 0x01);
+
+      return range;
+    }
+
+    // Returns an ambient light reading when continuous mode is activated
+    // (readAmbientSingle() also calls this function after starting a single-shot
+    // ambient light measurement)
+    pub fn readAmbientContinuous(&mut self)
+    {
+      uint16_t millis_start = millis();
+      while ((readReg(RESULT__INTERRUPT_STATUS_GPIO) & 0x20) == 0)
+      {
+        if (io_timeout > 0 && ((uint16_t)millis() - millis_start) > io_timeout)
+        {
+          did_timeout = true;
+          return 0;
+        }
+      }
+
+      uint16_t ambient = readReg16Bit(RESULT__ALS_VAL);
+      self.write_register(RegisterAddress::SYSTEM__INTERRUPT_CLEAR, 0x02);
+
+      return ambient;
+    }
+
+    // Did a timeout occur in one of the read functions since the last call to
+    // timeoutOccurred()?
+    pub fn timeoutOccurred(&mut self)
+    {
+      bool tmp = did_timeout;
+      did_timeout = false;
+      return tmp;
     }
 
     // Private Methods ///////////////////////////////////////////
@@ -353,6 +452,13 @@ where
         let value: u16 = ((value[0] as u16) << 8) | (value[1] as u16);
         Ok(value)
     }
+}
+
+fn constrain<T: PartialOrd>(value: T, min: T, max: T) -> T
+{
+    if value <= min { return min; }
+    else if value >= max { return max; }
+    return value;
 }
 
 #[allow(non_camel_case_types)]
